@@ -1,0 +1,18 @@
+# matlab-
+卓金武 徐州矿大 写
+%求下列非线性规划问题
+% min f(x) = x1^2 + x2^2 + 8
+% s.t.  x1^2 - x2 >=0
+%       -x1 - x2^2 +2 = 0
+%       x1,x2 >= 0
+options = optimset;
+[x,y] = fmincon('fun1',rand(2,1),[],[],[],[],zeros(2,1),[],...
+    'fun2',options)
+    
+    
+    function f = fun1(x);
+f = x(1)^2 + x(2)^2 + 8;
+
+function [g,h] = fun2(x);
+g = -x(1)^2 + x(2); %不等式约束
+h = -x(1) - x(2)^2 + 2;% 等式约束
