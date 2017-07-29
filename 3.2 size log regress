@@ -1,0 +1,72 @@
+>> % size 用法
+>> x = [2 2 2; 1 1 1];
+>> size(x)
+
+ans =
+
+     2     3
+
+>> y = 'this is a string';
+>> size(y)
+
+ans =
+
+     1    16
+
+>> z = 'this is a char';
+>> char(y,z)
+
+ans =
+
+this is a string
+this is a char  
+
+>> size(ans)
+
+ans =
+
+     2    16
+     
+     
+     
+     
+>> %log 用法
+a1 = log(2.7183)
+
+a1 =
+
+    1.0000
+
+>> a2 =  log2(4)
+
+a2 =
+
+     2
+
+>> a3 = log10(10)
+
+a3 =
+
+     1
+
+>> a4 = log8(64)
+Undefined function 'log8' for input arguments of type 'double'.
+ 
+Did you mean:
+>> a4 = log(64)
+
+a4 =
+
+    4.1589
+
+>> %这种情况需要一个简单变换
+>> a4 = log(64)/log(8)
+
+a4 =
+
+     2
+     
+ 
+ % regress用法
+ % B = regress(Y,X) returns the vector B of regression coefficients in the linear model Y= X*B
+      
