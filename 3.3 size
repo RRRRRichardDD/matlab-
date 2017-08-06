@@ -1,0 +1,53 @@
+M = size(X,DIM) returns the length of the dimension specified
+    by the scalar DIM.  For example, size(X,1) returns the number
+    of rows. If DIM > NDIMS(X), M will be 1.
+ % size扩展用法
+ 
+ 
+ >> A = [1 2 3; 4 5 6];
+>> A(:,1)
+
+ans =
+
+     1
+     4
+
+>> A(:,2)
+
+ans =
+
+     2
+     5
+
+>> A(:,3)
+
+ans =
+
+     3
+     6
+
+>> A(1,:)
+
+ans =
+
+     1     2     3
+
+>> A(2,:)
+
+ans =
+
+     4     5     6
+
+>> 
+>> A(2,2)
+
+ans =
+
+     5
+
+>> A(2,3)
+
+ans =
+
+     6
+% ：表示所有
